@@ -209,6 +209,29 @@ section > p {
   background: rgba(206, 24, 0, 0.164);
 }
 
+/* bookmark (press release) */
+.bookmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.6rem 0;
+  text-decoration: none;
+}
+.bookmark:hover {
+  background: rgba(55, 53, 47, 0.03);
+}
+.bookmark-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.bookmark-source {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
 /* columns */
 .columns {
   display: flex;

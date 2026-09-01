@@ -1,6 +1,7 @@
 ---
 import { companies } from '../data/experience';
 import TagPill from './TagPill.astro';
+import Bookmark from './Bookmark.astro';
 ---
 
 {
@@ -34,6 +35,9 @@ import TagPill from './TagPill.astro';
                 <li>{b}</li>
               ))}
             </ul>
+          )}
+          {r.bookmark && (
+            <Bookmark href={r.bookmark.href} title={r.bookmark.title} source={r.bookmark.source} />
           )}
         </div>
       ))}

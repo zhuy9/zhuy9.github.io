@@ -78,6 +78,12 @@ export const companies = [
           'Cut Portfolio Workbench load time 50% (8→4 min), doubling capacity to 90 funds.',
           'Refactored calculation modules to a testable architecture: test coverage 0→80%, defects −40%.',
         ],
+        bookmark: {
+          href: 'https://cwan.com/press-releases/enfusion-introduces-the-next-phase-of-portfolio-workbench-empowering-asset-managers-with-increased-efficiency-and-flexibility/',
+          title:
+            'Enfusion Introduces the Next Phase of Portfolio Workbench, Empowering Asset Managers with Increased Efficiency and Flexibility',
+          source: 'cwan.com',
+        },
       },
       {
         title: 'Associate Vice President, Senior Software Engineer',
