@@ -74,9 +74,8 @@ export const companies = [
         title: 'Vice President, Senior Software Engineer',
         period: 'Mar 2025 – Nov 2025',
         bullets: [
-          'Architected Fixed Income Rebalancing for Portfolio Workbench — a potential industry-first, expanding the addressable market ~40%.',
+          'Architected Fixed Income Rebalancing for Portfolio Workbench',
           'Cut Portfolio Workbench load time 50% (8→4 min), doubling capacity to 90 funds.',
-          'Refactored calculation modules to a testable architecture: test coverage 0→80%, defects −40%.',
         ],
         bookmark: {
           href: 'https://cwan.com/press-releases/enfusion-introduces-the-next-phase-of-portfolio-workbench-empowering-asset-managers-with-increased-efficiency-and-flexibility/',
@@ -96,7 +95,7 @@ export const companies = [
         title: 'Senior Associate, Java Developer',
         period: 'Mar 2023 – Feb 2024',
         bullets: [
-          'Owned the Non-Drifting Rebalancer end-to-end as sole engineer (99.5% uptime); built an integration-test framework for 40+ PMS REST APIs (30→80%+ coverage).',
+          'Owned the Non-Drifting Rebalancer end-to-end as sole engineer.',
         ],
       },
       {
