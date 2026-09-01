@@ -1,0 +1,258 @@
+:root {
+  --text: rgb(55, 53, 47);
+  --text-muted: rgba(55, 53, 47, 0.6);
+  --rule: rgba(55, 53, 47, 0.09);
+  --callout-bg: rgba(240, 239, 237, 1);
+  --link-underline: rgba(55, 53, 47, 0.22);
+  --content-width: 720px;
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 6rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 2px;
+}
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.25rem 0;
+}
+
+section > p {
+  margin: 0.6em 0;
+}
+
+/* header */
+.site-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* callout */
+.callout {
+  display: flex;
+  gap: 0.75rem;
+  background: var(--callout-bg);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+}
+.callout-icon {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.callout-body {
+  width: 100%;
+}
+.callout-body p {
+  margin: 0.25em 0;
+}
+.callout-heading {
+  font-weight: 600;
+}
+
+/* experience */
+.company {
+  margin: 1.75rem 0;
+}
+.company:first-of-type {
+  margin-top: 1rem;
+}
+.company-head {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+/* All company logos are height-normalized so squares (meds) and wide
+   wordmarks (enfusion) read as the same visual size. */
+.company-icon {
+  height: 32px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+.company-name {
+  font-size: 1.125rem;
+}
+.company-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0.15rem 0 0.4rem;
+}
+.role {
+  margin: 0.85rem 0 0.85rem 2.55rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+}
+.role-title {
+  font-weight: 600;
+  margin: 0 0 0.1rem;
+}
+.role-period {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.role ul {
+  margin: 0.35rem 0;
+  padding-left: 1.1rem;
+}
+.role li {
+  margin: 0.2rem 0;
+}
+
+/* tags */
+.tags {
+  margin: 0.35rem 0;
+}
+.tag {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  border-radius: 3px;
+  margin: 0.2em 0.35em 0.2em 0;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  font-family: var(--sans);
+}
+.tag-gray {
+  background: rgba(28, 19, 1, 0.11);
+}
+.tag-brown {
+  background: rgba(127, 51, 0, 0.156);
+}
+.tag-orange {
+  background: rgba(196, 88, 0, 0.203);
+}
+.tag-yellow {
+  background: rgba(209, 156, 0, 0.282);
+}
+.tag-green {
+  background: rgba(0, 96, 38, 0.156);
+}
+.tag-blue {
+  background: rgba(0, 118, 217, 0.203);
+}
+.tag-purple {
+  background: rgba(92, 0, 163, 0.141);
+}
+.tag-pink {
+  background: rgba(183, 0, 78, 0.152);
+}
+.tag-red {
+  background: rgba(206, 24, 0, 0.164);
+}
+
+/* columns */
+.columns {
+  display: flex;
+  gap: 46px;
+}
+.column {
+  flex: 1;
+  min-width: 0;
+}
+.col-head {
+  font-weight: 600;
+  margin: 0.4rem 0;
+}
+.column ul {
+  margin: 0.3rem 0;
+  padding-left: 1.1rem;
+}
+.column li {
+  margin: 0.2rem 0;
+}
+
+/* skills */
+.skill-group {
+  margin: 0.6rem 0;
+}
+
+/* footer */
+.site-foot {
+  display: flex;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 2.5rem 1.1rem 4rem;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+  .columns {
+    flex-direction: column;
+    gap: 0;
+  }
+  .role {
+    margin-left: 1rem;
+  }
+}

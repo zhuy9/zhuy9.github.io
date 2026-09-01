@@ -1,0 +1,132 @@
+---
+import Base from '../layouts/Base.astro';
+import Experience from '../components/Experience.astro';
+import TagPill from '../components/TagPill.astro';
+
+const skills = [
+  { group: 'Languages', items: ['Java 11/17', 'Python 3.x', 'SQL (MySQL, PostgreSQL)', 'TypeScript'] },
+  {
+    group: 'Frameworks & Tools',
+    items: ['Spring Boot', 'Hibernate ORM', 'JMS', 'REST APIs', 'Git', 'Jenkins CI/CD', 'Postman', 'Angular 2+'],
+  },
+  { group: 'Practices', items: ['Agile/Scrum', 'Test-Driven Development', 'CI/CD pipelines'] },
+  {
+    group: 'Domain',
+    items: [
+      'Portfolio Management Systems',
+      'Portfolio Construction & Rebalancing',
+      'Risk & Valuation',
+      'Order Management Systems',
+      'Financial Derivatives',
+    ],
+  },
+];
+---
+
+<Base>
+  <header class="site-head">
+    <img class="avatar" src="/icons/avatar.png" width="80" height="80" alt="Darren Zhu" />
+    <h1 class="page-title">Darren Zhu</h1>
+  </header>
+
+  <aside class="callout">
+    <div class="callout-icon" aria-hidden="true">👆</div>
+    <div class="callout-body">
+      <p class="callout-heading">Software Engineer · Chicago, IL</p>
+      <p>
+        I build systems where correctness and latency actually matter. Trading and portfolio
+        management at Enfusion, connected devices at Intecular, telemedicine at meds.com.
+      </p>
+      <p><a href="https://www.linkedin.com/in/darren-zhu/">LinkedIn</a></p>
+    </div>
+  </aside>
+
+  <hr />
+  <section>
+    <h2>About</h2>
+    <p>
+      I've always liked understanding how complex systems work. As a kid I built remote control planes.
+      Today it's software that moves real money, real devices, and real patient data.
+    </p>
+    <p>
+      Most of my career has been in FinTech. At Enfusion, acquired by Clearwater Analytics, I went from
+      junior engineer to Vice President in 3.5 years, working on portfolio management, portfolio
+      construction, and general ledger accounting for institutional clients. Since then I've extended
+      into smart home IoT at Intecular and telemedicine at meds.com.
+    </p>
+    <p>
+      My work sits at the intersection of low-latency, distributed, and event-driven systems: Java and
+      the JVM on the backend, React and Angular on the front, GCP and AWS underneath. The constraints I
+      like are the unglamorous ones. Auditability, regulatory requirements, sub-second response times,
+      and staying correct under load.
+    </p>
+    <p>
+      I also mentor engineers, improve development process, and care about systems that stay
+      maintainable as they grow.
+    </p>
+    <p>
+      I think good systems are a lot like good tiramisu. The individual layers matter, but what really
+      matters is how everything comes together.
+    </p>
+  </section>
+
+  <hr />
+  <section>
+    <h2>Experience</h2>
+    <Experience />
+  </section>
+
+  <hr />
+  <section>
+    <h2>What I Work On</h2>
+    <div class="columns">
+      <div class="column">
+        <p class="col-head">Engineering</p>
+        <ul>
+          <li>Low-latency and distributed systems</li>
+          <li>Concurrent and event-driven architecture</li>
+          <li>Performance, scalability, reliability</li>
+          <li>Cloud infrastructure on GCP and AWS</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p class="col-head">Industries</p>
+        <ul>
+          <li>FinTech: portfolio management, trading, risk</li>
+          <li>Smart home and connected IoT devices</li>
+          <li>Telemedicine and digital health</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+  <section>
+    <h2>Skills</h2>
+    {
+      skills.map((g) => (
+        <div class="skill-group">
+          <p class="col-head">{g.group}</p>
+          <p class="tags">
+            {g.items.map((s) => (
+              <TagPill label={s} color="gray" />
+            ))}
+          </p>
+        </div>
+      ))
+    }
+  </section>
+
+  <hr />
+  <section>
+    <h2>Education</h2>
+    <p><strong>Rose-Hulman Institute of Technology</strong> · Terre Haute, IN</p>
+    <p>Bachelor of Science, Computer Science · Aug 2018 – May 2022 · GPA 3.93 / 4.00</p>
+  </section>
+
+  <hr />
+  <footer class="site-foot">
+    <a href="https://www.linkedin.com/in/darren-zhu/">LinkedIn</a>
+    <a href="https://github.com/zhuy9">GitHub</a>
+  </footer>
+</Base>

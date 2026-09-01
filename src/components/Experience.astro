@@ -1,0 +1,42 @@
+---
+import { companies } from '../data/experience';
+import TagPill from './TagPill.astro';
+---
+
+{
+  companies.map((c) => (
+    <article class="company">
+      <div class="company-head">
+        <img class="company-icon" src={c.icon} alt={c.name} loading="lazy" />
+        <div class="company-head-text">
+          <h3 class="company-name">{c.name}</h3>
+          <p class="company-meta">
+            {c.location} · {c.mode}
+            {c.tenure ? ` · ${c.tenure}` : ''}
+          </p>
+          {(c.industry || c.tech) && (
+            <p class="tags">
+              {c.industry?.map((t) => <TagPill label={t.label} color={t.color} />)}
+              {c.tech?.map((t) => <TagPill label={t.label} color={t.color} />)}
+            </p>
+          )}
+        </div>
+      </div>
+
+      {c.roles.map((r) => (
+        <div class="role">
+          <p class="role-title">
+            {r.title} <span class="role-period">· {r.period}</span>
+          </p>
+          {r.bullets && (
+            <ul>
+              {r.bullets.map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </article>
+  ))
+}
